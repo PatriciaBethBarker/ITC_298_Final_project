@@ -5,7 +5,7 @@ var moment = require("moment");
 //models with key-value binding and custom events
 var LOAD = "SELECT * FROM posts WHERE slug = $slug;";
 var SAVE_NEW = "INSERT INTO posts (slug, title, author, content, created_at, formatted) VALUES ($slug, $title, $author, $content, datetime('now'), $formatted);";
-var UPDATE = "UPDATE posts SET title = $title, content = $content WHERE slug = $slug;";
+var UPDATE = "UPDATE posts SET title = $title, author = $author, content = $content WHERE slug = $slug;";
 var LAST = "SELECT last_insert_rowid() AS rowid FROM posts;";
 
 //Backbone models are observable
@@ -13,8 +13,8 @@ module.exports = Backbone.Model.extend({
   defaults: {
     name: "Untitled Post",
     title: "",
-    author: "Author",
     content: "",
+    author: "",
     //created_at: "",
     slug: "new"
   },//they fire events when their properties are changed
@@ -42,8 +42,8 @@ module.exports = Backbone.Model.extend({
 
         query.run({
           $title: data.title,
-          $author: data.author,
           $content: data.content,
+          $author: data.author,
           $formatted: moment().format("MMMM Do YYYY, h:mm:ss a"),
           $slug: slug
         }, done);
@@ -55,6 +55,7 @@ module.exports = Backbone.Model.extend({
         query.run({
           $title: data.title,
           $content: data.content,
+          $author: data.author,
           $slug: data.slug
         }, done);
       }
