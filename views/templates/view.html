@@ -1,0 +1,18 @@
+<div class="containter">
+
+  <h1>Edit Posts</h1>
+    <p><a href="./edit">Click here to edit post</a></p>
+
+        <div class="center_div">
+          {{#edit post}}
+
+            <h2>Title: {{title}}</h2>
+              <ul>
+                <li>Category: {{category}}</li>
+                <li>Content: {{content}}</li>
+                <li>Author: {{author}}</li>
+                <li>Date: {{formatted}}</li>
+              </ul>
+          {{/edit post}}
+      </div>
+</div>

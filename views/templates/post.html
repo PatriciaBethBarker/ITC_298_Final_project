@@ -1,0 +1,36 @@
+<div class="containter">
+    <h1>Add/Edit Posts</h1>
+    <!--we are changing this file to loop-->
+    <span class="login">Hello, {{user}}</span>
+    <h2>Welcome to PBB Blog</h2>
+
+<div class="center_div">
+  <!--  view connects a model to the screen for input and output -->
+      <form action="/posts/{{post.id}}" method="POST" class="edit">
+        <input type="hidden" name="id" value="{{post.id}}">
+
+              <div class="formAdd">
+                <label>Post title:  </label>
+                <input name="title" value="{{post.title}}">
+              </div>
+
+              <div class="formAdd">
+                <label>Author:  </label>
+                <input name="author" value="{{post.author}}">
+              </div>
+
+              <div class="formAdd">
+                <label>Content:  </label>
+                <input name="content" value="{{post.content}}">
+              </div>
+
+         <input type="submit">
+        </form>
+  </div>
+
+</div>
+
+<!--Load lodash from cdnjs-->
+<!--Load jQuery from cdnjs-->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!--Load lodash and jQuery from from cdnjs, then add following script tag to the page-->

@@ -1,0 +1,18 @@
+<span class="login">Hello, {{user}}</span>
+<h1>Welcome to PBB Blog</h1>
+
+<p>PBB Blog posts are listed here: <a href="/posts/new">Create a new post Here</p>
+    <ul>
+      {{#posts}}
+        <li><a href="/posts/{{slug}}/">{{title}}</a> | {{formatted}}</li>
+      {{/posts}}
+    </ul>
+
+    <div class="shorten">
+      {{#posts}}
+    			<h1><a href="/posts/{{slug}}/">{{title}}</a></h1>
+
+             <p>{{formatted}}</p>
+    			{{truncated}}
+    	{{/posts}}
+    </div>
