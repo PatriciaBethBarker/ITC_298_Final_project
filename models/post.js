@@ -14,7 +14,7 @@ module.exports = Backbone.Model.extend({
     name: "Untitled Post",
     title: "",
     content: "",
-    author: "",
+    author: "", //leave empty
     //created_at: "",
     slug: "new"
   },//they fire events when their properties are changed
