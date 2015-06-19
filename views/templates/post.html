@@ -6,22 +6,22 @@
 
 <div class="center_div">
   <!--  view connects a model to the screen for input and output -->
-      <form action="/posts/{{post.id}}" method="POST" class="edit">
-        <input type="hidden" name="id" value="{{post.id}}">
+      <form action="/posts/{{post.slug}}" method="POST" class="edit">
+        <input type="hidden" name="slug" value="{{post.slug}}">
 
               <div>
-                <label>Post title:  </label>
-                <input name="title" value="{{post.title}}">
+                <label>Post Title:  </label>
+                <input name="title" class="title" value="{{post.title}}">
               </div>
 
               <div>
                 <label>Author:  </label>
-                <input name="author" value="{{post.author}}">
+                <input name="author"  class="author" value="{{post.author}}">
               </div>
 
               <div>
                 <label>Content:  </label>
-                <input name="content" value="{{post.content}}">
+                <textarea name="content" class="content" rows="5" cols="5" value="{{post.content}}"></textarea>
               </div>
 
          <input type="submit">
