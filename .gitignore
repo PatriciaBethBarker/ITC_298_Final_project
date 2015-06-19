@@ -1,0 +1,4 @@
+**/node_modules
+build
+# we are not checking in the build file to GitHub
+*.db
