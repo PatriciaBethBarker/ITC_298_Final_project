@@ -21,7 +21,7 @@ module.exports = [{
   method: "POST",//post saved
   handler: require("./handlers/savePost")
 }, {//create single page view
-  path: "/posts/{slug}",//return name of post
+  path: "/posts/{slug}/",//return name of post
   method: "GET",
   handler: require("./handlers/viewPost")
 }, {
