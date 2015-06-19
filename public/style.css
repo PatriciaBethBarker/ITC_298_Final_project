@@ -29,7 +29,7 @@ header, footer, nav  {
 }
 
 #container {
-	width: 600px;
+	width: 640px;
 	margin: 0 auto;
 	overflow: hidden;
   text-align: left;
@@ -56,7 +56,7 @@ header, footer, nav  {
 	list-style-type: none;
 	float:left;
 	line-height:1.4em;
-	width:45%;
+	width:80%;
 	text-align:center;
 }
 
@@ -73,7 +73,6 @@ header, footer, nav  {
 .posts ul li {
 	list-style-type: none;
 	float:left;
-	line-height:1.4em;
 	line-height:2.5em;
 }
 
@@ -97,7 +96,7 @@ header, footer, nav  {
 }
 
 .login {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 h1 {
