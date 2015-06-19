@@ -8,9 +8,9 @@ module.exports = function(req, reply) {
     });
 
     //repeat same state as home
-    if (!req.state.user) {//send to Login
-      return reply.redirect("/login");
-    }
+    // if (!req.state.user) {//send to Login
+    //   return reply.redirect("/login");
+    // }
 
     post.load(function () {
         reply.view("post", {
