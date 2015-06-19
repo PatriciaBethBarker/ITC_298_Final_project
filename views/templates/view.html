@@ -1,18 +1,20 @@
-<div class="containter">
+<h1>Welcome to PBB Blog</h1>
 
-  <h1>Edit Posts</h1>
-    <p><a href="./edit">Click here to edit post</a></p>
+<span class="login">Hello, {{user}}</span>
 
-        <div class="center_div">
-          {{#edit post}}
+<p>PBB Blog posts are listed here: <a href="/posts/new">Create a new post Here</p>
 
-            <h2>Title: {{title}}</h2>
-              <ul>
-                <li>Category: {{category}}</li>
-                <li>Content: {{content}}</li>
-                <li>Author: {{author}}</li>
-                <li>Date: {{formatted}}</li>
-              </ul>
-          {{/edit post}}
-      </div>
-</div>
+  <div class="list">
+      {{#posts}}
+
+      <ul class="posts">
+        <li><a href="/posts/{{slug}}/">{{title}}</a> | {{formatted}}</li>
+      </ul>
+
+<h1><a href="/posts/{{slug}}/">{{title}}</a></h1>
+
+             <p>{{formatted}}</p>
+    			<p>{{truncated}}<a href="/posts/{{slug}}/">...&nbsp;&nbsp;More&raquo;</a></p>
+
+    	{{/posts}}
+  </div>
