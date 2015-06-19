@@ -2,24 +2,31 @@
   "postList":
   [
     {
-      "title": "Some Thing Flowery Here",
-      "content": "Yep, we are doing something!",
+      "title": "Patent No. 6630507",
+      "content": "Patent No. 6630507, held by the United States Department of Health and Human Services, covers the use of cannabinoids for treating a wide range of di",
       "author": "Patricia",
-      "category": "Green",
+      "category": "Botany",
       "created_at": ""
     },
     {
-      "title": "Something Veggie Blog",
-      "content": "Maybe, we are doing a little something!",
+      "title": "Cannabis Legal History",
+      "content": "Cannabis Legal History",
       "author": "Patricia",
-      "category": "Yellow",
+      "category": "Botany",
       "created_at": ""
     },
     {
-      "title": "More of Something Spicy Blog",
-      "content": "Wow, we are doing more of something!",
+      "title": "Earliest Cannabis Species",
+      "content": "Cannabis is an ancient plant with roots all over the world. The earliest species are thought to have grown in the mountainous Hindu Kush region of Pak",
       "author": "Patricia",
-      "category": "Spicy",
+      "category": "Botany",
+      "created_at": ""
+    },
+    {
+      "title": "Strain Genetics",
+      "content": "Two things influence the structural formation of any given cannabis plant: genetics and environment. The plant’s genetic makeup, also called a genotyp",
+      "author": "Patricia",
+      "category": "Botany",
       "created_at": ""
     }
   ]
