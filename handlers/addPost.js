@@ -1,7 +1,6 @@
-//addPosts.js
 var db = require("../db");
 
-module.exports = function(req, reply) {
+module.exports = function (req, reply) {
   console.log(req.state);
   //if statement required here
   if (!req.state.user){
