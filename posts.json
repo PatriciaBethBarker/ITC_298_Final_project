@@ -1,0 +1,26 @@
+{
+  "postList":
+  [
+    {
+      "title": "Some Thing Flowery Here",
+      "content": "Yep, we are doing something!",
+      "author": "Patricia",
+      "category": "Green",
+      "created_at": ""
+    },
+    {
+      "title": "Something Veggie Blog",
+      "content": "Maybe, we are doing a little something!",
+      "author": "Patricia",
+      "category": "Yellow",
+      "created_at": ""
+    },
+    {
+      "title": "More of Something Spicy Blog",
+      "content": "Wow, we are doing more of something!",
+      "author": "Patricia",
+      "category": "Spicy",
+      "created_at": ""
+    }
+  ]
+}
