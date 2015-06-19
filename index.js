@@ -31,11 +31,11 @@ server.views({
   engines: {
     html: require("handlebars")
   },
-  path: "views/templates", //"templates"
-  layoutPath: "views",
+  path: "views/templates", //"templates",
+  layoutPath: "views",//
   layout: "default",
   //add partials path here
-    partialsPath: "views/templates/partials",
+    partialsPath: "views/templates/partials",//
   isCached: false
 });
 //register the routes, once matched, I want a response
