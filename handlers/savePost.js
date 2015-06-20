@@ -12,6 +12,6 @@ module.exports = function(req, reply) {
       console.error(err);
     }
 
-    reply.redirect("/");//reload to home page
+    reply.redirect("/posts");//reload to home page
   });
 };
