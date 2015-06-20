@@ -6,7 +6,6 @@ var moment = require("moment");
 var LOAD = "SELECT * FROM posts WHERE slug = $slug;";
 var SAVE_NEW = "INSERT INTO posts (slug, title, author, content, created_at, formatted) VALUES ($slug, $title, $author, $content, datetime('now'), $formatted);";
 var UPDATE = "UPDATE posts SET title = $title, author = $author, content = $content WHERE slug = $slug;";
-var DELETE = "DELETE * FROM posts WHERE slug = $slug;";
 
 //BB models are observable, separate data from view
 module.exports = Backbone.Model.extend({
@@ -36,7 +35,7 @@ module.exports = Backbone.Model.extend({
       var query = db.connection.prepare(SAVE_NEW);//fix the db err
       var data = this.toJSON();
       var slug = this.get("title").toLowerCase();
-      console.log(data);
+      //console.log(data);
       var space = /\s/g;
       slug = slug.replace(space, "-");//fix spaces with a slash
 

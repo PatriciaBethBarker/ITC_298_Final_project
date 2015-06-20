@@ -10,7 +10,7 @@ var server = new hapi.Server( {
     }
   }
 });
-var view = require("./models/post");//create variABLE FOR VIEW
+
 
 // Start the server
 server.connection({ port: 8000 });//listen using the connection function

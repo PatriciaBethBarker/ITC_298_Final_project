@@ -1,27 +1,31 @@
 <div class="containter">
-        <h1>Add/Edit Posts</h1>
+    <h1>Add/Edit Posts</h1>
     <!--we are changing this file to loop-->
     <span class="login">Hello, {{user}}</span>
-        <h2>Welcome to PBB Blog</h2>
+    <h2>Welcome to PBB Blog</h2>
 
 <div class="center_div">
   <!--  view connects a model to the screen for input and output -->
-    <form action="/posts/{{post.slug}}/edit" method="POST" class="edit">
+      <form action="/posts/{{post.slug}}" method="POST" class="edit">
         <input type="hidden" name="slug" value="{{post.slug}}">
 
-          <fieldset>
-                <legend>Blog Post:  </legend>
+              <div>
+                <label>Post title:  </label>
+                <input name="title" value="{{post.title}}">
+              </div>
 
-                <label>Post Title:  </label>
-            <input name="title" class="title" value="{{post.title}}">
-
+              <div>
                 <label>Author:  </label>
-            <input name="author"  class="author" value="{{post.author}}">
+                <input name="author" value="{{post.author}}">
+              </div>
 
+              <div>
                 <label>Content:  </label>
-            <textarea name="content" class="content" rows="5" cols="5" value="{{post.content}}"></textarea>
-          </fieldset>
+                <input name="content" value="{{post.content}}">
+              </div>
 
          <input type="submit">
-    </form>
+        </form>
   </div>
+
+</div>
