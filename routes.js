@@ -17,7 +17,7 @@ module.exports = [{
   method: "GET",
   handler: require("./handlers/addPost")
 }, {
-  path: "/posts/{slug}/",//edit post
+  path: "/posts/{slug}/edit",//edit post
   method: "GET",
   handler: require("./handlers/editPost")
 }, {

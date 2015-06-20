@@ -1,5 +1,4 @@
 //index.js
-
 var hapi = require("hapi");
 //move the db require below server connection
 var server = new hapi.Server( {
@@ -30,6 +29,7 @@ server.views({
 //register the templates
   engines: {
     html: require("handlebars")
+
   },
   path: "views/templates", //"templates",
   layoutPath: "views",//
