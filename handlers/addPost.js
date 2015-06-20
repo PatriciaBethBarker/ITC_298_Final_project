@@ -1,4 +1,5 @@
 var db = require("../db");
+var Post = require("../models/post");
 
 module.exports = function (req, reply) {
   console.log(req.state);

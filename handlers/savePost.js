@@ -1,4 +1,5 @@
 //savePost.js
+var db = require("../db");
 var Post = require("../models/post");
 //this is a post =>grab it from models
 module.exports = function(req, reply) {
