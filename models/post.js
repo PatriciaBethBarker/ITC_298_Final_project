@@ -8,7 +8,7 @@ var SAVE_NEW = "INSERT INTO posts (slug, title, author, content, created_at, for
 var UPDATE = "UPDATE posts SET title = $title, author = $author, content = $content WHERE slug = $slug;";
 var LAST = "SELECT last_insert_rowid() AS rowid FROM posts;";
 
-//Backbone models are observable
+//BB models are observable, separate data from view
 module.exports = Backbone.Model.extend({
   defaults: {
     name: "Untitled Post",
@@ -22,10 +22,11 @@ module.exports = Backbone.Model.extend({
     var self = this;
     var query = db.connection.prepare(LOAD);
     var data = this.toJSON();
-    query.get({
+    query.get({//get
       $slug: data.slug
     }, function(err, loaded) {
-      self.set(loaded);
+      //console.log(loaded)//added at 6:18pm, off at 7pm
+      self.set(loaded);//set
       done(err);
     });
   },
@@ -38,7 +39,7 @@ module.exports = Backbone.Model.extend({
       var slug = this.get("title").toLowerCase();
       // console.log(data);
       var space = /\s/g;
-      slug = slug.replace(space, "-");
+      slug = slug.replace(space, "-");//fix spaces with a slash
 
         query.run({
           $title: data.title,
