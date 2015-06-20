@@ -4,20 +4,20 @@ module.exports = [{
   path: "/",
   method: "GET",
   handler: require("./handlers/home")
+}, {
+  path: "/posts", //duplicate of home path
+  method: "GET",
+  handler: require("./handlers/home")
 }, {//create single page view
   path: "/posts/{slug}",//return name of post
   method: "GET",
   handler: require("./handlers/viewPost")
 }, {
-  path: "/posts", //duplicate of home path
-  method: "GET",
-  handler: require("./handlers/home")
-}, {
   path: "/posts/new",//new post
   method: "GET",
   handler: require("./handlers/addPost")
 }, {
-  path: "/posts/{slug}/edit",//edit post
+  path: "/posts/{slug}/",//edit post
   method: "GET",
   handler: require("./handlers/editPost")
 }, {
