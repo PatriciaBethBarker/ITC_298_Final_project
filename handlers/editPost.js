@@ -15,7 +15,7 @@ module.exports = function(req, reply) {
     post.load(function () {
         reply.view("post", {
             title: "Edit post",
-            post: post.toJSON()
+            post: post.toJSON()//calling the db
         })//edit the post
    })
 };
