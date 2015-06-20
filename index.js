@@ -10,6 +10,7 @@ var server = new hapi.Server( {
     }
   }
 });
+var view = require("./models/post");//create variABLE FOR VIEW
 
 // Start the server
 server.connection({ port: 8000 });//listen using the connection function
@@ -36,7 +37,10 @@ server.views({
   layout: "default",
   //add partials path here
     //partialsPath: "views/templates/partials",//
-  isCached: false
+  isCached: false,
+  context:{
+    dev: true
+  }
 });
 //register the routes, once matched, I want a response
 
